@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Hello from './componenet/Hello';
+import Welcome from './componenet/Welcome';
+import World from './componenet/World';
+import styles from './App.module.css';
 
 function App() {
+  const name = "Tom";
+  const naver = {
+    name:"네이버",
+    url:"https://www.naver.com"
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App">     
+      <Hello/>
+      <div className={styles.box}>App</div>
     </div>
   );
 }
