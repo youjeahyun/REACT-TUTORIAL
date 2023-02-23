@@ -1,17 +1,18 @@
-import World from "./World"
-import styles from './Hello.module.css';
+import { useState } from "react";
+import UserName from "./userName"
 
-export default function Hello() {
+export default function Hello({age}) {
+    const [name, setName] = useState('Mike');
+    const msg = age > 19 ? "성인입니다." : "미성년자 입니다.";
+
     return(
         <>
-        <h1 style={{
-            color:'#f00',
-            borderRight:'12px solid #000',
-            marginBottom:'50px',
-            opacity:1,
-        }}>Hello</h1>
-   
-           <div className={styles.box}>Hello</div>
+        <h2 id="name">{name}({age}) : {msg}</h2>
+        <UserName name={name}/>
+        <button onClick={()=>{
+            setName(name === "Mike" ? "Jane" : "Mike")
+         
+        }}>prop</button>
         </>
     )
 };
