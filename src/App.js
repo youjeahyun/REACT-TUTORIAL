@@ -1,20 +1,15 @@
 import './App.css';
-import Hello from './componenet/Hello';
-import Welcome from './componenet/Welcome';
-import World from './componenet/World';
-import styles from './App.module.css';
+import Day from './componenet/Day';
+import DayList from './componenet/DayList';
+import Header from './componenet/Header';
 
 function App() {
-  const name = "Tom";
-  const naver = {
-    name:"네이버",
-    url:"https://www.naver.com"
-  }
+
   return (
     <div className="App">     
-      <Hello age={10}/>
-      <Hello age={20}/>
-      <Hello age={30}/>
+      <Header/>
+      <DayList/>
+      <Day />
     </div>
   );
 }
